@@ -31,22 +31,12 @@ public class HelloController {
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
-        hello.setTest(name);
         hello.setName(name);
-
         return hello;
     }
 
     static class Hello {
-        private String test;
         private String name;
-
-        public void setTest(String test){
-            this.test = test;
-        }
-        public String getTest(){
-            return test;
-        }
 
         public String getName() {
             return name;
